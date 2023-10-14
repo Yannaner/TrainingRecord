@@ -1,4 +1,3 @@
-// An implementation of a Training Record as an ArrayList
 
 import java.util.*;
 public class TrainingRecord {
@@ -6,12 +5,12 @@ public class TrainingRecord {
     
     public TrainingRecord() {
         tr = new ArrayList<Entry>();
-    } //constructor
+    } 
     
-    // add a record to the list
+    //add a record to the list
    public void addEntry(Entry e) {
        tr.add(e);    
-   } // addClass
+   } 
    
    public String removeEntry(Entry e) {
        ListIterator<Entry> iter = tr.listIterator();
@@ -37,7 +36,7 @@ public class TrainingRecord {
              result = current.getEntry();
        }
        return result;
-   } // lookupEntry
+   } 
    
    public String lookupAll (int d, int m, int y) {
        ListIterator<Entry> iter = tr.listIterator();
@@ -52,6 +51,5 @@ public class TrainingRecord {
            result = "No entries found";
        }
        return result;
-   } // lookupEntry
-
-} // TrainingRecord
+   } 
+}

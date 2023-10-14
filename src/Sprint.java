@@ -19,5 +19,5 @@ public class Sprint extends Entry {
     String result = getName()+ " sprint " + getNumberOfSprints() + " times" + " with " + getRecoveryTime() + " minutes of recovery time" + " on "
              +getDay()+"/"+getMonth()+"/"+getYear()+ " with a total distance of " + getDistance() + " kilometers" + "\n";
     return result;
-   } //getEntry
+   } 
 }

@@ -14,5 +14,5 @@ public class Cycle extends Entry {
              +getHour()+":"+getMin()+":"+ getSec() + " in " + getTerrain() + " on "
              +getDay()+"/"+getMonth()+"/"+getYear()+"\n";
         return result;
-    } //getEntry
+    } 
 }

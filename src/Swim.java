@@ -14,5 +14,5 @@ public class Swim extends Entry {
              +getHour()+":"+getMin()+":"+ getSec() + " " + getLocation() + " on "
              +getDay()+"/"+getMonth()+"/"+getYear()+"\n";
         return result;
-    } //getEntry
+    } 
 }

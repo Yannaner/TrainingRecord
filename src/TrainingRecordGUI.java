@@ -8,17 +8,17 @@ import java.lang.Number;
 import java.util.ArrayList;
 
 public class TrainingRecordGUI extends JFrame implements ActionListener {
-    private JTextField name = new JTextField(30);               //super
-    private JTextField day = new JTextField(2);                 //super
+    private JTextField name = new JTextField(30);               
+    private JTextField day = new JTextField(2);                 
     private JTextField month = new JTextField(2);
-    private JTextField year = new JTextField(4);                //super
+    private JTextField year = new JTextField(4);                
     private JTextField hours = new JTextField(2);               
     private JTextField mins = new JTextField(2);
     private JTextField secs = new JTextField(2);
     private JTextField dist = new JTextField(4);
-    private JTextField terrain = new JTextField(10);            //cycle
-    private JTextField numberOfSprints = new JTextField(2);     //sprint
-    private JTextField recoveryTime = new JTextField(2);        //sprint
+    private JTextField terrain = new JTextField(10);          
+    private JTextField numberOfSprints = new JTextField(2);     
+    private JTextField recoveryTime = new JTextField(2);       
     private String[] locations = {"indoors", "outdoors"};
     private JComboBox<String> locationDropDown = new JComboBox<>(locations);
     private JLabel labn = new JLabel(" Name:");
@@ -44,12 +44,14 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
     private TrainingRecord myAthletes = new TrainingRecord();
     private JTextArea outputArea = new JTextArea(5,50);
     
+    
+    
     public static void main(String[] args) {
         TrainingRecordGUI applic = new TrainingRecordGUI();
         applic.setVisible(true);
-    } // main
+    } 
  
-   // set up the GUI 
+  
      public TrainingRecordGUI() {
         super("Training Record");
         setLayout(new FlowLayout()); 
@@ -113,20 +115,18 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         setSize(720,400);
         setVisible(true); 
         blankDisplay();
-        
-        // To save typing in new entries while testing, uncomment
-        // the following lines (or add your own test cases)
-        Entry a = new Entry("Alice", 1, 2, 2003, 0, 16, 7, 3);
-        Entry b = new Entry("Bob", 1, 2, 2003, 0, 14, 15, 3);
-        Entry c1 = new Entry("Claire",7,3,2010, 0, 26, 20, 7);        
-        Entry c2 = new Entry("Claire",11,3,2010, 0, 24, 55, 7);        
+       
+        Entry a = new Entry("Ian", 1, 2, 2003, 0, 16, 7, 3);
+        Entry b = new Entry("Ian", 1, 2, 2003, 0, 14, 15, 3);
+        Entry c1 = new Entry("Sean",7,3,2010, 0, 26, 20, 7);        
+        Entry c2 = new Entry("Sean",11,3,2010, 0, 24, 55, 7);        
         myAthletes.addEntry(a);
         myAthletes.addEntry(b);
         myAthletes.addEntry(c1);        
         myAthletes.addEntry(c2);        
-     } // constructor
+     } 
   
-   // listen for and respond to GUI events 
+
      public void actionPerformed(ActionEvent event) {    
         if (event.getSource() == addR) {
           if (name.getText().equals("") || month.getText().equals("") || day.getText().equals("") || year.getText().equals("") || dist.getText().equals("")
@@ -262,7 +262,7 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         if (event.getSource() == clear) {
            outputArea.setText(null);
            blankDisplay();
-        } // actionPerformed
+        } 
         
         if (event.getSource() == remove) {
             if (name.getText().equals("") || month.getText().equals("") || day.getText().equals("") || year.getText().equals("")) {
@@ -296,5 +296,5 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         terrain.setText("");
         numberOfSprints.setText("");
         recoveryTime.setText("");
-     }// blankDisplay    
-} // TrainingRecordGUI
+     }  
+} 
