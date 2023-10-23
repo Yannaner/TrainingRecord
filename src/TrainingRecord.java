@@ -1,5 +1,7 @@
 
 import java.util.*;
+
+//Project to sign up for CAS
 public class TrainingRecord {
     private List<Entry> tr;
     
